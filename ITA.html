@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Monographies</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+        body{
+            font-family: Serif;
+        }
+        header {
+            position: relative;
+            height: 650px;
+            background-image: linear-gradient(148deg, rgba(101,57,145,1) 0%, rgba(249,51,145,1) 100%);
+            padding: 0px;
+        }
+
+        h1 {
+            padding: 100px 100px 0px 100px;
+            text-align: left;
+        }
+
+        header h1 {
+            color: white;
+        }
+
+        header p{
+            padding: 0px 100px 0px 100px;
+            color: rgba(255,255,255,0.6);
+            font-size: 1.2em;
+            text-align: left;
+        }
+
+        svg {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100px;
+        }
+
+        .nav-bar{
+            padding: 1.5em 0em;
+        }
+        .logo{
+            float: left;
+            text-align: left;
+            width: 60%;
+            height: auto;
+            padding-left: 100px;
+
+        }
+        .logo img{
+            width: 200px;
+            height: 70px;
+        }
+
+        .menu{
+            float: right;
+            width: 40%;
+            height: auto;
+            padding: 10px 10px;
+        }
+
+        .clearfix{
+            clear: both;
+        }
+
+        .hidden{
+            display: none;
+        }
+
+        .nav{
+            padding: 15px;
+        }
+
+        .nav-item{
+            padding: 0px 20px;
+        }
+        .nav-item a{
+            color: white;
+            font-size: 18px;
+            border-color: white;
+            border-radius: 5px;
+        }
+
+        .nav-item a:hover{
+            text-decoration: underline;
+            background: white;
+            color: #6c388f;
+            transition-duration: .08ms;
+            border-radius: 5px;
+        }
+
+        .nav-item .active{
+            text-decoration: underline;
+            background: white;
+            color: #6c388f;
+            transition-duration: .08ms;
+            border-radius: 5px;
+        }
+        select{
+            background: none;
+            border-color: white;
+            border-radius: 5px;
+            color: white;
+            padding: 5px;
+        }
+
+        select:hover{
+            background: white;
+            color: #6c388f;
+        }
+
+        option{
+            color: #6c388f;
+        }
+        .nav-link{
+            padding: 5px 10px;
+        }
+
+        .left{
+            float: left;
+            width: 50%;
+            text-align: center;
+        }
+
+        .right{
+            float: right;
+            width: 50%;
+            text-align: center;
+        }
+
+        .dashboard{
+            border-radius: 10px;
+            width: 600px;
+            height: 450px;
+
+        }
+
+        a.arrow{
+            text-align: left;
+        }
+
+        a .arrow:hover{
+            margin-right: -20px;
+            transition-delay: .08ms;
+        }
+
+        @media (max-width: 699px) {
+            .svg--lg {
+                display: none;
+            }
+            .right{
+                float: none;
+                width: 100%;
+            }
+            .left{
+                float: none;
+                width: 100%;
+            }
+            header{
+                height: auto;
+            }
+            header h1{
+                padding: 0px;
+                text-align: center;
+            }
+            header p{
+                text-align: center;
+                padding: 0px 0px 0px 0px;
+            }
+            .menuIcon{
+                padding: 0px 0px 0px 100px;
+            }
+            .dashboard{
+                width: 100%;
+                height: 100%;
+            }
+            .logo{
+                width: 50%;
+                padding-left: 0px;
+                text-align: center;
+            }
+            .logo img{
+                width: 150px;
+                height: 50px;
+            }
+            .menu{
+                width: 50%;
+            }
+            .nav-item{
+                padding: 0px 0px;
+            }
+            .nav{
+                display: block;
+            }
+            .btn{
+                color: white;
+                background-color: #e400ff2e;
+                border-color: #e400ff2e;
+            }
+            .btn:active{
+                color: white;
+                background-color: #e400ff2e;
+                border-color: #e400ff2e;
+            }
+            .show{
+                display: none;
+            }
+            .hidden{
+                display: block;
+            }
+        }
+
+        @media (min-width: 700px) {
+            .svg--sm {
+                display: none;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1024px){
+            header{
+                height: auto;
+            }
+            .logo{
+                width: 40%;
+            }
+            .menu{
+                width: 60%;
+            }
+            .left{
+                float: none;
+                width: 100%;
+            }
+            .right{
+                float: none;
+                width: 100%;
+            }
+            .dashboard{
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav class="nav-bar">
+        <div class="logo">
+            <a class="navbar-brand" href="#">
+                <img class="header_logo" src="Monographies_files/monographies_logo_white.png">
+            </a>
+        </div>
+        <div class="menu">
+            <ul class="nav show">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://monographies.net/signin">ACCEDI</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <select class="nav-link dropdown-toggle selectbox" onchange="javascript:location.href = this.value;" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <div class="dropdown-menu">
+                            <option selected>choose language</option>
+                            <option value="index.html">ENG</option>
+                            <option value="ITA.html">ITA</option>
+                            <option value="CHN.html">CHN</option>
+                        </div>
+                    </select>
+                </li>
+            </ul>
+            <p class="menuIcon">
+                <button class="btn hidden" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://monographies.net/signin">ACCEDI</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <select class="nav-link dropdown-toggle selectbox" onchange="javascript:location.href = this.value;" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                            <div class="dropdown-menu" >
+                                <option selected>choose language</option>
+                                <option value="index.html">ENG</option>
+                                <option value="ITA.html">ITA</option>
+                                <option value="CHN.html">CHN</option>
+                            </div>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+
+
+
+        </div>
+        <div class="clearfix"></div>
+    </nav>
+    <div class="left">
+        <h1>Basta informazioni frammentate</h1>
+        <p>Comprendi a fondo ogni argomento ricomponendo tutti i frammenti di cui è fatto</p>
+        <a href="http://monographies.net/workspace.html"><img src="Monographies_files/itaArrow.png" class="arrow" width="160px" height="130px"></a>
+    </div>
+    <div class="right">
+        <img class="dashboard" src="Monographies_files/mokup.png">
+    </div>
+    <div class="clearfix"></div>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <polygon class="svg--sm" fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100"/>
+        <polygon class="svg--lg" fill="white" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100" />
+    </svg>
+</header>
+
+<section>
+
+
+</section>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
